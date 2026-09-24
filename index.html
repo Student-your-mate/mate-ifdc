@@ -182,22 +182,34 @@
       <p class="closing">No te pedimos que confíes en nosotros. Te pedimos que le exijas al centro de estudiantes lo que te debe, empezando por nosotros.</p>
       <p class="signature"><b>MATE</b>, Movimiento Activo de Transformación Estudiantil</p>
     </article>
-
     <section class="goals" aria-labelledby="goals-title">
-      <h2 id="goals-title">Objetivos para este año</h2>
+      <h2 id="goals-title">Objetivos:</h2>
       <p class="note">Lo que nos comprometemos a hacer. Cuando esté hecho, lo vas a ver tachado acá.</p>
       <ul>
-        <li>Redactar y aprobar el estatuto del centro de estudiantes.</li>
-        <li>Convocar la primera asamblea de cada profesorado para elegir a sus representantes.</li>
-        <li>Lanzar la primera convocatoria para publicar con puntaje docente.</li>
-        <li>Realizar la primera jornada de intercambio de apuntes.</li>
-        <li>Realizar una jornada entre profesorados donde cada carrera muestre en qué está trabajando.</li>
-        <li>Poner en marcha las instancias de mediación académica.</li>
-        <li>Crear el fondo de insumos y publicar su primera rendición de cuentas.</li>
+        <li><label><input type="checkbox" id="goal-1"><span>Redactar y aprobar el estatuto del centro de estudiantes.</span></label></li>
+        <li><label><input type="checkbox" id="goal-2"><span>Convocar la primera asamblea de cada profesorado para elegir a sus representantes.</span></label></li>
+        <li><label><input type="checkbox" id="goal-3"><span>Lanzar la primera convocatoria para publicar con puntaje docente.</span></label></li>
+        <li><label><input type="checkbox" id="goal-4"><span>Realizar la primera jornada de intercambio de apuntes.</span></label></li>
+        <li><label><input type="checkbox" id="goal-5"><span>Realizar una jornada entre profesorados donde cada carrera muestre en qué está trabajando.</span></label></li>
+        <li><label><input type="checkbox" id="goal-6"><span>Poner en marcha las instancias de mediación académica.</span></label></li>
+        <li><label><input type="checkbox" id="goal-7"><span>Crear el fondo de insumos y publicar su primera rendición de cuentas.</span></label></li>
       </ul>
     </section>
 
     <footer>Elecciones del Centro de Estudiantes del IFDC</footer>
   </main>
+  <script>
+    document.querySelectorAll('.goals input[type="checkbox"]').forEach(function (box) {
+      var key = 'mate-' + box.id;
+      try {
+        if (localStorage.getItem(key) === '1') box.checked = true;
+      } catch (e) {}
+      box.addEventListener('change', function () {
+        try {
+          localStorage.setItem(key, box.checked ? '1' : '0');
+        } catch (e) {}
+      });
+    });
+  </script>
 </body>
 </html>
