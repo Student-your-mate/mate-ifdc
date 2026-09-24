@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MATE · Carta a los estudiantes del IFDC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F1F4EC;
+    --ink: #1D2519;
+    --muted: #56634F;
+    --yerba: #3B5A2C;
+    --leaf: #DCE5CC;
+    --line: #C4CFB4;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161C14;
+      --ink: #E6ECDD;
+      --muted: #A3B097;
+      --yerba: #A9C98A;
+      --leaf: #243020;
+      --line: #34422D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161C14;
+    --ink: #E6ECDD;
+    --muted: #A3B097;
+    --yerba: #A9C98A;
+    --leaf: #243020;
+    --line: #34422D;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Literata", Georgia, "Times New Roman", serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  header { margin-bottom: 3rem; }
+  .wordmark {
+    font-family: "Bricolage Grotesque", "Arial Black", Arial, sans-serif;
+    font-weight: 800;
+    font-size: clamp(5rem, 26vw, 9.5rem);
+    line-height: .82;
+    letter-spacing: -.045em;
+    color: var(--yerba);
+    margin: 0;
+  }
+  .expansion {
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    color: var(--muted);
+    margin: 1rem 0 0;
+    max-width: 18rem;
+  }
+  .expansion b { color: var(--ink); font-weight: 800; }
+
+  .salutation {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 0 1.5rem;
+  }
+  article p { margin: 0 0 1.35rem; }
+  .lead {
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  .closing {
+    margin: 2.75rem 0 1.25rem;
+    padding: 1.5rem 0 0;
+    border-top: 2px solid var(--yerba);
+    font-size: 1.45rem;
+    line-height: 1.45;
+    font-style: italic;
+  }
+  .signature {
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0;
+  }
+  .signature b { color: var(--yerba); font-weight: 800; }
+
+  section.goals {
+    margin-top: 3.5rem;
+    background: var(--leaf);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.5rem 1.5rem;
+  }
+  .goals h2 {
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    margin: 0 0 .35rem;
+  }
+  .goals .note {
+    font-size: 1rem;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+  }
+  .goals ul { list-style: none; margin: 0; padding: 0; }
+  .goals li {
+    display: flex;
+    gap: .85rem;
+    align-items: flex-start;
+    padding: .7rem 0;
+    border-top: 1px solid var(--line);
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .goals li:first-child { border-top: 0; }
+  .goals li::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: .2rem;
+    border: 2px solid var(--yerba);
+    border-radius: 50%;
+  }
+
+  footer {
+    margin-top: 2.5rem;
+    font-size: .95rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1 class="wordmark">MATE</h1>
+      <p class="expansion"><b>M</b>ovimiento <b>A</b>ctivo de <b>T</b>ransformación <b>E</b>studiantil</p>
+    </header>
+
+    <article>
+      <p class="salutation">A los estudiantes del IFDC:</p>
+
+      <p class="lead">Hace años que este instituto no tiene centro de estudiantes. No es que se haya perdido una elección: se vació, quedó acéfalo, y nadie se ocupó de que eso no pudiera volver a pasar. Esa es la razón por la que existe MATE.</p>
+
+      <p>Nuestro primer objetivo no es una propuesta, es una condición: darle al centro de estudiantes un estatuto que lo haga sobrevivir a las personas. Un reglamento electoral claro, reglas para cuando alguien abandona su cargo, y la garantía de que siempre va a haber centro, gane quien gane.</p>
+
+      <p>Segundo, queremos que este instituto se represente como lo que es: muchos profesorados distintos conviviendo. Además de las áreas generales, proponemos un representante por cada profesorado, elegido en asamblea por sus propios compañeros. Así tu carrera tiene voz dentro del centro aunque tu lista no haya ganado.</p>
+
+      <p>Tercero, creemos que el centro de estudiantes de un instituto docente tiene que ocuparse de lo que nos hace falta: puntaje y formación. Vamos a articular instancias que otorguen puntaje docente. Vamos a organizar jornadas propias, con certificación, donde presenten sus trabajos. Y vamos a hacer circular el material de estudio entre generaciones: una jornada de intercambio de apuntes al comienzo de cada cuatrimestre, para que los estudiantes avanzados les pasen textos y resúmenes a los ingresantes, y un repositorio digital abierto y gratuito, organizado por materia.</p>
+
+      <p>Cuarto, cuando tengas un problema con una cátedra, un criterio de evaluación o una situación con un docente, no deberías tener que resolverlo solo. Habilitaremos todas las instancias de mediación académica necesarias para resolver la situación. Presentás tu caso, el centro te acompaña ante la institución por los canales que corresponden, y queda registro. No se trata de enfrentarse con nadie, sino de que los problemas tengan un camino para resolverse.</p>
+
+      <p>También vamos a abrir cátedras propias, espacios de formación y debate sobre la historia del movimiento estudiantil, nuestros derechos como estudiantes, el RAI y la vida estudiantil. Un estudiante que conoce sus derechos puede hacerlos valer.</p>
+
+      <p>Para lo cotidiano: NO se puede prometer que nunca va a faltar papel en los baños, porque eso no depende de nosotros. Lo que sí depende de nosotros es que, cuando falte, haya a quién recurrir. Por eso proponemos un fondo de insumos del centro, con reposición periódica y las cuentas publicadas. No es un gesto, es un mecanismo.</p>
+
+      <p>También queremos recuperar la libreta física: no para reemplazar el sistema digital, sino para que cada estudiante pueda elegir tener su constancia en papel, con el respaldo de la institución.</p>
+
+      <p>Cada propuesta de esta carta viene con su cómo. Eso es lo que te pedimos que compares.</p>
+
+      <p class="closing">No te pedimos que confíes en nosotros. Te pedimos que le exijas al centro de estudiantes lo que te debe, empezando por nosotros.</p>
+      <p class="signature"><b>MATE</b>, Movimiento Activo de Transformación Estudiantil</p>
+    </article>
+
+    <section class="goals" aria-labelledby="goals-title">
+      <h2 id="goals-title">Objetivos para este año</h2>
+      <p class="note">Lo que nos comprometemos a hacer. Cuando esté hecho, lo vas a ver tachado acá.</p>
+      <ul>
+        <li>Redactar y aprobar el estatuto del centro de estudiantes.</li>
+        <li>Convocar la primera asamblea de cada profesorado para elegir a sus representantes.</li>
+        <li>Lanzar la primera convocatoria para publicar con puntaje docente.</li>
+        <li>Realizar la primera jornada de intercambio de apuntes.</li>
+        <li>Realizar una jornada entre profesorados donde cada carrera muestre en qué está trabajando.</li>
+        <li>Poner en marcha las instancias de mediación académica.</li>
+        <li>Crear el fondo de insumos y publicar su primera rendición de cuentas.</li>
+      </ul>
+    </section>
+
+    <footer>Elecciones del Centro de Estudiantes del IFDC</footer>
+  </main>
+</body>
+</html>
